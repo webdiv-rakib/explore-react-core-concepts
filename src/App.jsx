@@ -7,11 +7,21 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Device name='laptop' price='55'></Device>
+      <Device name='mobile' price='17000'></Device>
+      <Device name='watch' price='3000'></Device>
       <Person></Person>
+      <Student grade='7' score='99'></Student>
+      <Student></Student>
       <Student></Student>
       <Developer></Developer>
     </>
   )
+}
+
+function Device(props) {
+  // console.log(props);
+  return <h2>This device: {props.name}price: {props.price} </h2>
 }
 
 function Person() {
@@ -21,7 +31,9 @@ function Person() {
   return <h3>I am {person.name} with age {person.age} and have {money} Taka</h3>
 }
 
-function Student() {
+const { grade, score } = { grade: '7', score: '99' };
+function Student(props) {
+  console.log(props);
   return (
     <div className='student'>
       <h3>This is a Student</h3>
