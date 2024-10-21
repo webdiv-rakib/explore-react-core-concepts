@@ -9,6 +9,7 @@ function App() {
       <h1>Vite + React</h1>
       <Person></Person>
       <Student></Student>
+      <Developer></Developer>
     </>
   )
 }
@@ -22,10 +23,24 @@ function Person() {
 
 function Student() {
   return (
-    <div>
+    <div className='student'>
       <h3>This is a Student</h3>
       <p>Name:</p>
       <p>Age:</p>
+    </div>
+  )
+}
+
+function Developer() {
+  return (
+    <div style={{
+      margin: '20px',
+      padding: '20px',
+      border: '2px solid purple',
+      borderRadius: '20px'
+    }}>
+      <h5>Devo devo</h5>
+      <p>Coding: </p>
     </div>
   )
 }
