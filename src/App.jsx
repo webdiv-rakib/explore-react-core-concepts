@@ -5,30 +5,39 @@ import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
+import BookStore from './BookStore'
+import Book from './Book'
 
 function App() {
-  const actors = ['Sakib', 'Raj', 'Jasim', 'Rubel', 'Salman Sha'];
-  const singers = [
-    { id: 1, name: 'Dr Mahfuzur Rahman', age: 68 },
-    { id: 2, name: 'Eva Rahman', age: 38 },
-    { id: 3, name: 'Shuvro Dev', age: 68 },
-    { id: 4, name: 'Pritom', age: 28 }
+  // const actors = ['Sakib', 'Raj', 'Jasim', 'Rubel', 'Salman Sha'];
+  // const singers = [
+  //   { id: 1, name: 'Dr Mahfuzur Rahman', age: 68 },
+  //   { id: 2, name: 'Eva Rahman', age: 38 },
+  //   { id: 3, name: 'Shuvro Dev', age: 68 },
+  //   { id: 4, name: 'Pritom', age: 28 }
+  // ]
+  const books = [
+    { id: 1, name: 'Physics', price: '132' },
+    { id: 2, name: 'Math', price: '150' },
+    { id: 3, name: 'Chemistry', price: '180' },
+    { id: 4, name: 'Biology', price: '120' },
+    { id: 5, name: 'English', price: '90' },
   ]
+
+
   return (
     <>
       <h3>Vite + React</h3>
-      {
+      <BookStore books={books}></BookStore>
+
+      {/* {
         singers.map(singer => <Singer singer={singer}></Singer>)
 
       }
-
-
-
-
       <Actor name={'Bappa Raz'}></Actor>
       {
         actors.map(actor => <Actor name={actor}></Actor>)
-      }
+      } */}
       {/* <Todo
         task='Learn React'
         isDone={true}>
